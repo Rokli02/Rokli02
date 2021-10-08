@@ -1,0 +1,97 @@
+body {
+    margin: auto;
+    font-family: 'Comic Sans MS';
+    background-image: linear-gradient(135deg, #a3ccf8, #7293db, #778ced, #3c5ae6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: content-box;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background-size: auto;
+    overflow: hidden;
+}
+
+.tablediv {
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+
+.tablecol {
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    gap: 2rem;
+    flex-basis: 100%;
+}
+
+.tablecol:first-child {
+    flex-wrap: wrap;
+    flex: 1 0 40%;
+    display:  grid;
+}
+
+.tablecol:last-child {
+    align-content: flex-start;
+    flex: 1 0 60%;
+    padding-left: 2em;
+    padding-top: 50px;
+}
+
+.colrow {
+    margin-top: 2rem;
+    padding-top: 0.3em;
+    width: 15ch;
+    height: 1.5em;
+    border: 2px rgb(65, 65, 65) solid;
+    border-bottom-right-radius: 20% 50% ;
+    border-top-right-radius: 20% 50%;
+    background-position-x: -100em;
+    background-image: linear-gradient(rgba(102, 102, 102, 0.781), rgba(128, 128, 128, 0.712)); /* #6aa3f3a1 */
+    background-repeat: no-repeat;
+    background-size: 150%;
+    transition: all 1s ease-in-out;
+}
+
+.colrow:first-child {
+    margin-top: 15%;
+}
+
+@media screen and (min-width: 800px) {
+    body{
+        font-size: 1.6rem;
+    }
+
+    .tablecol:last-child {
+        padding-left: 8em
+    }
+    
+    img {
+        width: 80%;
+    }
+
+    
+    .colrow {
+        width: 90%;
+        padding-top: 0.2em;
+        height: 2em;
+    }
+}
+
+@keyframes fading_images {
+    0% {opacity: 0;}
+    10% {opacity: 0;}
+    25%{transform: rotateZ(0deg);}
+    50%{opacity: 1;}
+    75%{transform: rotateZ(8deg);}
+    100%{opacity:0;}
+}
+@keyframes slider {
+    0%{background-position-x: -100em; text-shadow: none;}
+    50%{background-position-x: -10em; text-shadow: azure 2px 1px;}
+    100%{background-position-x: -100em; text-shadow: none;}
+}

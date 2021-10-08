@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/Javascript" src="src/js/indexCon.js"></script>
+    <title>Kezdőlap</title>
+</head>
+<body>
+    <header>
+        <div>
+            <span id="reg">Regisztráció</span>
+        </div>
+        <nav>
+            <ul>
+                <li class="activeli">
+                    <span class="activenav">
+                        <span class="fa fa-home"></span><span class="navtext">Kezdőlap</span>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <span class="fa fa-film"></span><span class="navtext">Animáció</span>
+                    </span>           <!--<a href="src/BrandAnim.html"></a>-->
+                </li>
+                <li>
+                    <span>
+                        <span class="fa fa-calendar"></span><span class="navtext">Órarend</span>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <span class="fa fa-at"></span><span class="navtext">Linkek</span>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <script>
+            handleNavBar();
+        </script>
+    </header>
+    <div>
+        <div class="main">
+            <h3>Kép nézegető</h3>
+            <div class="contentHolder">
+                <div class="picHolder">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="picSelector">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <script>swapImages();</script>
+        </div>
+        <div class="news">
+            <hr>
+            <h2>Newsletter</h2>
+            <hr>
+            <div>
+                <h3>Verzió 3.</h3>
+                <p>A CSS elemek közül ki lett törölve/át lett írva az, amelyik összetűzésbe került a futása során a Javascripttel 
+                (értem ez alatt, hogy vizuális bugok léptek fel, vagy adott funkciók nem rendeltetés szerűen működtek).
+                Javascript kezeli most már a navigációs sáv eseményeit, viszont még oldalt nem nyit meg, nem hajt végre módosítást a fő oldalon.
+                A kezdőoldalon a majd képeket tartó keret fel lett helyezve.
+                </p>
+                <p class="initdate">2021.10.07.</p>
+                <hr>
+            </div>
+            <div>
+                <h3>Verzió 2.</h3>
+                <p>Elkészül egy css fájl az oldalhoz és annak az alap elrendezése be lett állítva, egy kezdetleges szín összeállítással.
+                Egy ikonokat tartalmazó külső css hozzá lett importálva a weboldalhoz, 
+                innentől kezdve a tökéletes működéshez elengedhetetlen az internetkapcsolat.
+                A navigációs sávon az elemek stílust kaptak, valamint egy-egy ikont így jobban felismerhetőek lettek.
+                A regisztráció "gomb" még nem működőképes, csak a külső jellemzői lettek megadva.
+                </p>
+                <p class="initdate">2021.10.02.</p>
+                <hr>
+            </div>
+            <div>
+                <h3>Verzió 1.</h3>
+                <p>Elkészült az alap HTML váz, valamint a fájl struktúra kiépült.
+                Az első elkészült HTML oldal hozzá lett csatolva az "Animáció" nevű navigáció gombhoz, 
+                ami animált, nem interaktív elemeket tartalmaz, és végtelen ciklikusságba van. 
+                A vezérlés egy Javascript segítségével történik, így a két különböző "animáció" nem tud szétcsúszni.
+                </p>
+                <p class="initdate">2021.10.01.</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>
+            <u>Készítő</u>: Markó Roland<br>
+            <u>Lakhely</u>: Bükkábrány<br>
+            <u>Telefonszám</u>: - <br>
+            <u>E-mail</u>: marko@iit.uni-miskolc.hu<br>
+        </span>
+        <span>
+            <u>Foglalkozás</u>: Hallgató<br>
+            <u>Egyetem</u>: Miskolci Egyetem<br>
+            <u>Szak</u>: Mérnökinformatikus<br>
+            <u>Félév</u>: 5. félév<br>
+        </span>
+    </footer>
+</body>
+</html>

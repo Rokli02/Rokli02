@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/brand.css"/>
+    <title>Animation Demo</title>
+    <script>
+        function swapImages(){
+            let id = null;
+            var counter = 0;
+            const image = document.getElementById('kep');
+            const cola = document.getElementById('cola');
+            const fanta = document.getElementById('fanta');
+            const doritos = document.getElementById('doritos');
+            const chees = document.getElementById('cheeseb');
+            //image.style.transition = "";
+            image.style.transition = "background-position 5s, opacity 1s ease-in-out, transform 3s ease";
+            
+            clearInterval(id);
+            id = setInterval(frame, 100);
+            function frame() {
+
+                //Cola
+                if(counter > 210){
+                    image.style.opacity = 1;
+                    image.style.transform = 'rotateZ(2deg)';
+
+                    counter = 0;
+                }
+                else if(counter > 200){
+                    image.src = "img/Cola.png";
+                    image.style.transform = 'rotateZ(-1deg)';
+                }
+                else if(counter > 190){
+                    image.style.opacity = 0;
+                    chees.style.backgroundPositionX = '-80em';
+                    chees.style.textShadow = 'none';
+                }   
+
+                //Sajtburger
+                else if(counter > 160){
+                    image.style.opacity = 1;
+                    image.style.transform = 'rotateZ(-6deg)';
+                    chees.style.backgroundPositionX = '0em';
+                    chees.style.textShadow = 'azure 2px 1px';
+                }       
+                else if(counter > 150){
+                    image.src = "img/Cheeseburger.png";
+                    image.style.transform = 'rotateZ(1deg)';
+                }
+                else if(counter > 140){
+                    image.style.opacity = 0;
+                    doritos.style.backgroundPositionX = '-80em';
+                    doritos.style.textShadow = 'none';
+                }
+
+                //Doritos
+                else if(counter > 110){
+                    image.style.opacity = 1;
+                    image.style.transform = 'rotateZ(8deg)';
+                    doritos.style.backgroundPositionX = '0em';
+                    doritos.style.textShadow = 'azure 2px 1px';
+                }
+                else if(counter > 100){
+                    image.src = "img/Doritos.png";
+                    image.style.transform = 'rotateZ(4deg)';
+                }
+                else if(counter > 90){
+                    image.style.opacity = 0;
+                    fanta.style.backgroundPositionX = '-80em';
+                    fanta.style.textShadow = 'none';
+                }
+
+                //Fanta
+                else if(counter > 60){
+                    image.style.opacity = 1;
+                    image.style.transform = 'rotateZ(-2deg)';
+                    fanta.style.backgroundPositionX = '0em';
+                    fanta.style.textShadow = 'azure 2px 1px';
+                }
+                else if(counter > 50){
+                    image.src = 'img/Fanta.png';
+                    image.style.transform = 'rotateZ(8deg)';
+                }
+                else if(counter > 40) {
+                    image.style.opacity = 0;
+                    cola.style.backgroundPositionX = '-80em';
+                    cola.style.textShadow = 'none';
+                }
+                else if (counter > 10) {
+                    image.style.transform = 'rotateZ(-2deg)';
+                }
+                else if(counter > 0) {
+                    cola.style.backgroundPositionX = '0em';
+                    cola.style.textShadow = 'azure 2px 1px';
+                }
+                counter++;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="tablediv">
+        <div class="tablecol">
+            <label id="cola" class="colrow">Coca Cola</label>
+            <label id="fanta" class="colrow">Fanta</label>
+            <label id="doritos" class="colrow">Doritos</label>
+            <label id="cheeseb" class="colrow">Cheeseburger</label>
+        </div>
+        <div class="tablecol">
+           <img id="kep" src="img/Cola.png" alt="kep" width="80%">
+        </div>
+    </div>
+    <script>swapImages()</script>
+</body>
+</html>
