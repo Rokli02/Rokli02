@@ -227,6 +227,10 @@ div.news hr {
         display: none;
     }
 
+    .activenav {
+        width: 13ch;
+    }
+
     footer {
         width: 85%;
     }
@@ -248,7 +252,7 @@ div.news hr {
 }
 
 .activenav {
-    width: 13ch;
+    width: 15ch;
     display: inline-flex;
 }
 .activeli {
