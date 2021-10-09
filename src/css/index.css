@@ -129,8 +129,8 @@ div.news hr {
     border: 2px solid black;
     overflow: hidden;
 }
-.picHolder::before,
-.picHolder::after  {
+.picHolder span#before,
+.picHolder span#after  {
     position: absolute;
     content: '';
     width: 25%;
@@ -141,12 +141,12 @@ div.news hr {
     cursor: pointer;
     z-index: 8;
 }
-.picHolder::before{
+.picHolder span#before{
     background-position-x: left;
     background-image: url("img/Left.png");
     right: 75%;
 }
-.picHolder::after {
+.picHolder span#after{
     background-position-x: right;
     background-image: url("img/Right.png");
     left: 75%;
@@ -217,6 +217,7 @@ div.news hr {
 
     nav {
         top: 64%;
+        overflow-x: hidden;
     }
 
     .news {
@@ -235,6 +236,7 @@ div.news hr {
         padding-bottom: 4px;
         padding-top: 4px;
         height: min-content;
+        flex-wrap: nowrap;
     }
 
     header li {

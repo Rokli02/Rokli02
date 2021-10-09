@@ -54,51 +54,48 @@ function setTransitionSpeed(time) {
 }
 
 //TODO: Automaticly generate circles by the number of given pic urls!
-//      Make before and after tags, which will choose, to forward, or backward between the pics.
 picIndex = 0;
-nextPicIndex = 2;
-circleIndex = 1;
+nextPicIndex = 0;
+circleIndex = 0;
 canWork = true;
 function swapImages() {
-    $(".picHolder").click(function () {
+    $(".picHolder>span").click(function () {
         let pathOfPics = ['url("src/img/it1.jpg")', 'url("src/img/it2.jpg")', 'url("src/img/it3.jpg")'];
-        let picHolders = $(this).children("div");
+        let picHolders = $(".picHolder").children("div");
 
         if(canWork) {
             canWork = false;
-            if(picIndex == 0) {
-                setTransitionSpeed(700);
-                $(picHolders[0]).css("transform","translateX(-100%)");
-                $(picHolders[1]).css("transform","translateX(0%)");
-                
-                setTimeout(function() {
-                    setTransitionSpeed(0);
-                    $(picHolders[0]).css("transform","translateX(100%)");
-                    $(picHolders[0]).css("background-image", pathOfPics[nextPicIndex]);
+            if($(this).attr("id") == "before")
+                swap(pathOfPics, picHolders, 0);
+            else
+                swap(pathOfPics, picHolders, 1);
 
-                    incrementVariables(pathOfPics);
-                    canWork = true;
-                } ,800);
-                
-               
-                
-            } else if(picIndex == 1){
-                setTransitionSpeed(700);
-                $(picHolders[1]).css("transform","translateX(-100%)");
-                $(picHolders[0]).css("transform","translateX(0%)");
-                
-                setTimeout(function() {
-                    setTransitionSpeed(0);
-                    $(picHolders[1]).css("transform","translateX(100%)");
-                    $(picHolders[1]).css("background-image", pathOfPics[nextPicIndex]);
-
-                    incrementVariables(pathOfPics);
-                    canWork = true;
-                } ,800);
-            }
             selectCircles(circleIndex);
         }
     });
+}
+
+function swap(pathOfPics, picHolders, direction) {
+    if((picIndex % 2) == 0)
+        var indexes = [0, 1];
+    else
+        var indexes = [1, 0];
+
+    setTransitionSpeed(700);
+    if(direction == 1) {
+        incrementVariables(pathOfPics);
+    } else if(direction == 0) {
+        decreaseVariables(pathOfPics);
+    }
+    $(picHolders[indexes[0]]).css("transform","translateX(-100%)");
+    $(picHolders[indexes[1]]).css("background-image", pathOfPics[nextPicIndex]);
+    $(picHolders[indexes[1]]).css("transform","translateX(0%)");
+    
+    setTimeout(function() {
+        setTransitionSpeed(0);
+        $(picHolders[indexes[0]]).css("transform","translateX(100%)");
+        canWork = true;
+    } ,800);
 }
 
 function selectCircles(index) {
@@ -108,14 +105,25 @@ function selectCircles(index) {
 }
 
 function incrementVariables(pathOfPics) {
-    if(nextPicIndex == pathOfPics.length-1)
+    if(nextPicIndex >= pathOfPics.length-1)
         nextPicIndex = -1;
     if(picIndex == 1)
         picIndex = -1;
-    if(circleIndex == pathOfPics.length-1)
+    if(circleIndex >= pathOfPics.length-1)
         circleIndex = -1;
     picIndex++;
     nextPicIndex++;
     circleIndex++;
 }
 
+function decreaseVariables(pathOfPics) {
+    if(nextPicIndex <= 0)
+        nextPicIndex = pathOfPics.length;
+    if(picIndex == 0)
+        picIndex = 2;
+    if(circleIndex <= 0)
+        circleIndex = pathOfPics.length
+    picIndex--;
+    nextPicIndex--;
+    circleIndex--;
+}
