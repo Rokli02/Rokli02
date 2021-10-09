@@ -53,16 +53,19 @@ function setTransitionSpeed(time) {
     $(".picHolder div").css({"transition":text});
 }
 
+//TODO: Automaticly generate circles by the number of given pic urls!
+//      Make before and after tags, which will choose, to forward, or backward between the pics.
 picIndex = 0;
 nextPicIndex = 2;
 circleIndex = 1;
+canWork = true;
 function swapImages() {
     $(".picHolder").click(function () {
         let pathOfPics = ['url("src/img/it1.jpg")', 'url("src/img/it2.jpg")', 'url("src/img/it3.jpg")'];
         let picHolders = $(this).children("div");
-        let splitedMatrix = $(picHolders[0]).css("transform").slice(7,-1).split(", ");
 
-        if(pathOfPics != 2) {
+        if(canWork) {
+            canWork = false;
             if(picIndex == 0) {
                 setTransitionSpeed(700);
                 $(picHolders[0]).css("transform","translateX(-100%)");
@@ -74,7 +77,8 @@ function swapImages() {
                     $(picHolders[0]).css("background-image", pathOfPics[nextPicIndex]);
 
                     incrementVariables(pathOfPics);
-                } ,700);
+                    canWork = true;
+                } ,800);
                 
                
                 
@@ -89,34 +93,12 @@ function swapImages() {
                     $(picHolders[1]).css("background-image", pathOfPics[nextPicIndex]);
 
                     incrementVariables(pathOfPics);
-                } ,700);
+                    canWork = true;
+                } ,800);
             }
-
-        selectCircles(circleIndex);
-            //TODO: circle around the images; 
-            //      when one picture slides to the left, lose its transition attribute, 
-            //      get to the right, and gets back its transition attribute.
-            //      Meanwhile select circles below the pic.
+            selectCircles(circleIndex);
         }
-        else {
-            swapTwoImages(picHolders, splitedMatrix[4]);
-        }
-
-        /*console.log("Változó: "+picIndex);
-        console.log("0-ás: "+$(picHolders[0]).css("transform"));
-        console.log("1-es: "+$(picHolders[1]).css("transform"));*/
-       
     });
-}
-
-function swapTwoImages(picHolders, matrixNum) {
-    if(-350 != matrixNum) {
-        $(picHolders[0]).css("transform","translateX(-100%)");
-        $(picHolders[1]).css("transform","translateX(-100%)")
-    } else {
-        $(picHolders[0]).css("transform","translateX(0%)");
-        $(picHolders[1]).css("transform","translateX(0%)")
-    }
 }
 
 function selectCircles(index) {
