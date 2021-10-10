@@ -123,6 +123,7 @@ div.news hr {
 .picHolder {
     position: relative;
     display: inline-flex;
+    background-color: black;
     width: 525px;       /*0.875*/
     height: 600px;
     margin: auto;
@@ -158,7 +159,6 @@ div.news hr {
     width: 100%;
     height: 100%;
     z-index: 5;
-    transition: transform 0.7s;
 }
 
 .picHolder div:last-child {
