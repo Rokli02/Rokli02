@@ -15,6 +15,508 @@
         .news p {
             text-indent: 1em;
         }
+        body {
+    width: 100%;
+    margin: auto;
+    font-size: 25px;
+    color: beige;
+    background-color: rgb(54, 121, 221);
+}
+
+a {
+    line-height: 1.5;
+    color:rgb(199, 235, 192);
+    word-spacing: 0.4ch;
+    font-size: 0.9em;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+a:visited {
+    color: rgb(75, 75, 179);
+}
+
+a:hover {
+    color: rgb(127, 187, 115);
+}
+
+a:active {
+    color: cornflowerblue;
+}
+
+header {
+    width: 100%;
+    height: 10em;
+    background-color: rgb(30, 146, 255);
+    background-image: url(img/Bolygo.png);
+    background-repeat: no-repeat;
+    background-position: 50% -125px;
+}
+
+header>div {
+    text-align: right;
+}
+
+header ul {
+    padding-bottom: 6px;
+    height: 1.8em;
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(28, 0, 130);
+    overflow: hidden;
+}
+
+header li {
+    display: flex;
+    position: relative;
+    letter-spacing: 0.2ch;
+    text-align: center;
+    align-items: center;
+    padding: 0 20px 0 10px;
+    cursor: pointer;
+    color: papayawhip;
+    border-radius: 0 0 10px 10px;
+}
+
+header li.activeli {
+    transition: background-color 0.2s;
+}
+
+header li>span {
+    width: 1.4ch;    /*15ch*/
+    transition: width 0.5s;
+}
+
+header li>span>span.navtext {
+    overflow-x: hidden;
+}
+
+header span {
+    margin-right: 15px;
+}
+
+nav {
+    position: relative;
+    top: 60%;
+}
+
+.main table {
+    color: black;
+    font-size: 0.75em;
+    margin: 50px auto;
+    border: 2px solid black;
+    width: 80%;
+    background-color: rgb(98, 160, 219);
+}
+
+.main table tr:nth-child(even) {
+    background-color: rgb(110, 169, 224);
+}
+
+.main table th {
+    border: 2px solid black;
+}
+
+.main table td{
+    border: 1px solid darkblue;
+    padding: 0.3em;
+}
+
+.main table td:first-child {
+    width: 11ch;
+    border: 2px solid black;
+    height: 2em;
+}
+
+div.news p, footer {
+    font-family: Arial,  sans-serif ;
+}
+
+footer {
+    color:rgb(206, 195, 195);
+    border: 3px solid rgb(2, 7, 85);
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-top: 3em;
+    padding: 1em 1em 1em 1em;
+    background-color: rgb(96, 144, 233);
+    background-image: linear-gradient(350deg, rgb(43, 103, 194), rgb(40, 60, 172), darkblue);
+    justify-content: center;
+}
+
+footer span {
+    font-size: 18px;
+    line-height: 1.4em;
+    flex: 1 1 100%;
+}
+
+footer span:nth-child(2) {
+    border-left: 2px solid darkblue;
+    padding-left: 13px;
+}
+
+div.news hr {
+    margin-top: 40px;
+    width: 50%;
+    height: 3px;
+    border: none;
+    background-image: linear-gradient(90deg, rgb(54, 121, 221), white, rgb(54, 121, 221));
+}
+
+.navtext {
+   display: none;
+   position: relative;
+}
+
+.main {
+    text-align: center;
+    align-items: center;
+}
+
+.contentHolder {
+    display: grid;
+    margin: auto;
+}
+
+.picHolder {
+    position: relative;
+    display: inline-flex;
+    background-color: black;
+    width: 525px;       /*0.875*/
+    height: 600px;
+    margin: auto;
+    border: 2px solid black;
+    overflow: hidden;
+}
+.picHolder span#before,
+.picHolder span#after  {
+    position: absolute;
+    content: '';
+    width: 25%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 8;
+}
+.picHolder span#before{
+    background-position-x: left;
+    background-image: url("img/Left.png");
+    right: 75%;
+}
+.picHolder span#after{
+    background-position-x: right;
+    background-image: url("img/Right.png");
+    left: 75%;
+}
+
+.picHolder div {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.picHolder div:last-child {
+    transform: translateX(100%);
+}
+
+.picSelector div {
+    display: inline-flex;
+    margin: 10px auto;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(24, 23, 23);
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.picSelector div:first-child {
+    background-color: rgb(136, 133, 133);
+}
+
+.news {
+    margin: 15px 5%;
+}
+.news h3 {
+    margin: 50px 2% 15px 2%;
+}
+.news p {
+    margin: 15px 5%;
+}
+
+.initdate {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: right;
+    padding-right: 10em;
+    padding-top: 1.5em;
+}
+
+.mustBeFilled::before {
+    content: '* ';
+    font-size: 0.7em;
+}
+
+#blank {
+    display: none;
+    background-color: rgba(121, 105, 82, 0.377);
+    top: 0%;
+    left: 0%;
+    z-index: 16;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#registration {
+    display: none;
+    z-index: 20;
+    position: fixed;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 90%;
+    background-color: rgb(171, 180, 197);
+    border: 2px solid rgb(75, 58, 35);
+    font-weight: 600;
+    color: rgb(46, 51, 45);
+    overflow-y: scroll;
+}
+
+#registration p {
+    font-size: 0.6em;
+    text-align: center;
+}
+
+#registration>div {
+    width: 95%;
+    position: relative;
+    margin: auto;
+    text-align: left;
+}
+
+#registration>div>form>div {
+    display: grid;
+    grid-template-columns: max-content auto;
+    column-gap: 25px;
+    margin-top: 6%;
+    padding-right: 25px;
+    text-align: center;
+}
+
+#registration>div>form>div:last-child {
+    grid-template-columns: auto;
+}
+
+#registration input {
+    font-size: 0.78em;
+    background-color: rgb(216, 230, 218);
+}
+
+#registration button {
+    width: 12ch;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 1.8em;
+    font-size: 0.9em;
+}
+
+#reg {
+    width: 13ch;
+    padding-top: 5px;
+    margin-right: 5px;
+    height: 1em;
+    background-image: linear-gradient(180deg, black, rgb(41, 41, 41), rgb(70, 69, 69), rgb(88, 88, 88));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 930px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav {
+        top: 64%;
+        overflow-x: hidden;
+    }
+
+    .main table {
+        font-size: 0.65em;
+        height: auto;
+    }
+
+    .news {
+        margin-top: 4em;
+    }
+
+    .news>h2 {
+        text-align: center;
+    }
+
+    header {
+        background-position: 50% -174px;
+    }
+
+    header ul {
+        padding-bottom: 4px;
+        padding-top: 4px;
+        height: min-content;
+        flex-wrap: nowrap;
+    }
+
+    header li {
+        letter-spacing: 0ch;
+        border-radius: 10px 10px;
+    }
+
+    header li:hover::before,
+    header li:hover::after,
+    .activeli::before,
+    .activeli::after,
+    .hoverli::before,
+    .hoverli::after {
+        display: none;
+    }
+
+    .picHolder {
+        width: 350px;
+        height: 400px;
+    }
+
+    .activenav {
+        width: 14ch;
+    }
+
+    footer {
+        width: 85%;
+    }
+
+    footer span {
+        font-size: 14px;
+        line-height: 1.2em;
+    }
+
+    .initdate {
+        font-size: 16px;
+        padding-right: initial;
+        text-align: center;
+    }
+
+    #registration {
+        left: 5%;
+        height: 80%;
+        width: 90%;
+        overflow-y: scroll;
+    }
+
+    #registration>div>form>div {
+        grid-template-columns: auto;
+        column-gap: normal;
+        padding-right: 0px;
+        margin-top: 6%;
+        margin-bottom: 5%;
+    }
+
+    #registration input {
+        margin: auto;
+        max-width: 500px;
+        width: 70%;
+        text-align: center;
+    }
+
+    #reg {
+        background-image: linear-gradient(180deg, rgb(189, 180, 180), rgb(207, 207, 221));
+    }
+}
+
+.activenav {
+    width: 15ch;
+    display: inline-flex;
+}
+.activeli {
+    width: 13.5ch;
+    background-color: dodgerblue;
+    color: rgb(57, 57, 65);
+    text-shadow: 1px 1px 0 white, 
+                -1px -1px 0 white,
+                1px -1px 0 white,
+                -1px 1px 0 white;
+    z-index: 5;
+}
+.activeli::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    border-radius: 50%;
+    box-shadow: 5px -5px dodgerblue;
+    z-index: 5;
+    transition: all 0.2s;
+}
+.activeli::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    border-radius: 50%;
+    box-shadow: -5px -5px dodgerblue;
+    z-index: 5;
+    transition: all 0.2s;
+}
+.hoverli {
+    max-width: 13.5ch;;
+    background-color: rgb(45, 7, 182);   /*dodgerblue*/
+    color: rgb(57, 57, 65);
+    text-shadow: 1px 1px 0 white, 
+                -1px -1px 0 white,
+                1px -1px 0 white,
+                -1px 1px 0 white;
+    
+}
+.hoverli::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    border-radius: 50%;
+    box-shadow: 5px -5px rgb(45, 7, 182);
+    overflow-x: visible;
+    transition: all 0.2s;
+}
+.hoverli::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: transparent; 
+    position: absolute;
+    top: 0;
+    right: -15px;
+    border-radius: 50%;
+    box-shadow: -5px -5px rgb(45, 7, 182);
+    overflow-x: visible;
+    transition: all 0.2s;
+}
+
+
     </style>
     <title>Kezdőlap</title>
 </head>
