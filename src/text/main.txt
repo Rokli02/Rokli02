@@ -20,6 +20,23 @@
     <h2>Newsletter</h2>
     <hr>
     <div>
+        <h3>Verzió 6.</h3>
+        <p> Az űrlap működőképes, a mezőkbe kerülő értékeket leellenőrzi, és ha megfelelnek, akkor a console-ba kiírásra kerül a felvett személyek listája.
+            A Weblap elkészült!
+        </p>
+        <p class="initdate">2021.10.16.</p>
+        <hr>
+    </div>
+    <div>
+        <h3>Verzió 5.</h3>
+        <p>Az összes menű létrejött és betöltődik amikor a menűgombjára rányomunk. Az animáció fül alatt JQuerry animáció működik és 
+           minden gombra történő kattintással újraindul. A regisztrációs felület (űrlap) elkezdése megkezdődött. Egy fixált helyen lesz,
+           ami mindig látszódik a képernyőn. Ha elkattintunk róla, akkor bezárul.
+        </p>
+        <p class="initdate">2021.10.15.</p>
+        <hr>
+    </div>
+    	<div>
         <h3>Verzió 4.</h3>
         <p>JQuery segítségével a kezdőlapon a kép nézegető össze lett rakva, mindkét irányba megfelelő animáció hajtódik végre, 
             és amikor menű váltás történik, akkor resetelődik a kezdő állapotra. Javascript és Fetch API segítségével egy lokális txt-ből 

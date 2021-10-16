@@ -334,7 +334,7 @@ div.news hr {
     }
 
     .main table {
-        font-size: 0.65em;
+        font-size: 0.60em;
         height: auto;
     }
 
@@ -497,91 +497,4 @@ div.news hr {
     box-shadow: -5px -5px rgb(45, 7, 182);
     overflow-x: visible;
     transition: all 0.2s;
-}
-
-.animation {
-    width: 80%;
-    margin: 50px auto;
-    background-image: radial-gradient(#a3ccf8, #7293db, rgb(54, 121, 221), rgb(54, 121, 221), rgb(54, 121, 221));
-    /* background-image: linear-gradient(135deg, #a3ccf8, #7293db, #778ced, #3c5ae6); */
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-origin: content-box;
-    color: rgb(59, 57, 57);
-    font-family: 'Comic Sans MS';
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 3px;
-    background-size: auto;
-    overflow: hidden;
-}
-
-.tablediv {
-    width: 100%;
-    display: flex;
-    position: relative;
-    text-align: center;
-}
-
-.tablecol {
-    flex-wrap: wrap;
-    position: relative;
-    display: flex;
-    align-content: flex-start;
-    gap: 2rem;
-    flex-basis: 100%;
-}
-
-.tablecol:first-child {
-    flex-wrap: wrap;
-    flex: 1 0 40%;
-    display:  grid;
-}
-
-.tablecol:last-child {
-    align-content: flex-start;
-    flex: 1 0 60%;
-    padding-top: 50px;
-}
-
-.tablecol>img {
-    transition: background-position 5s, opacity 1s ease-in-out, transform 3s ease;
-}
-
-.colrow {
-    margin-top: 2rem;
-    padding-top: 0.2em;
-    width: 18ch;
-    height: min-content;
-    border: 2px rgb(65, 65, 65) solid;
-    border-bottom-right-radius: 20% 50% ;
-    border-top-right-radius: 20% 50%;
-    background-position-x: -100em;
-    background-image: linear-gradient(rgba(102, 102, 102, 0.781), rgba(128, 128, 128, 0.712)); /* #6aa3f3a1 */
-    background-repeat: no-repeat;
-    background-size: 150%;
-    transition: all 1.5s ease-in-out;
-}
-
-.colrow:first-child {
-    margin-top: 15%;
-}
-
-@media screen and (max-width: 930px) {
-    .animaton {
-        font-size: 0.9rem;
-    }
-    
-    img {
-        width: 80%;
-    }
-
-    .tablecol:last-child {
-        padding-left: 10px;
-    }
-    
-    .colrow {
-        font-size: 0.6em;
-        margin-top: 0.8rem;
-    }
 }
