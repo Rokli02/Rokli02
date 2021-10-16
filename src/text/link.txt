@@ -1,0 +1,16 @@
+<div class="main">
+            <h3>Linkek:</h3>
+            <a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML segédlet oldala</a><br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">Adat beolvasás JavaScript segítségével</a><br>
+            <a href="https://www.w3schools.com/jquery/" target="_blank">W+Schools JQuerry segédlet oldala</a><br>
+            <a href="https://github.com/Rokli02/" target="_blank">Github oldalam</a><br>
+            <a href="https://www.reddit.com/user/SamePlanet1910" target="_blank">Reddit oldalam</a><br>
+            <a href="https://s3.amazonaws.com/pas-wordpress-media/content/uploads/2015/02/shutterstock_211364203-e1424721531182.jpg" target="_blank">Bankszámlám</a><br>
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSIeOo6WOK8VRp9HWKQtWJNwX9nbAuHcXHzg&usqp=CAU" target="_blank">No Fear</a><br>
+            <a href="https://github.com/anitaagardi/web-technologies" target="_blank">WEB technológiák oldala</a><br>
+            <a href="https://www.gimp.org" target="_blank">Felhasznált képszerkesztő program</a><br>
+            <a href="https://neptun32.uni-miskolc.hu/hallgato/login.aspx" target="_blank">Hallgatói NEPTUN</a><br>
+            <a href="https://webmail.iit.uni-miskolc.hu/?_task=mail&_mbox=INBOX" target="_blank">IIT Webmail</a><br>
+            <a href="https://webmail.student.uni-miskolc.hu/?_task=mail&_mbox=INBOX" target="_blank">Student Webmail</a><br>
+            <a href="" target="_blank"></a><br>
+        </div>

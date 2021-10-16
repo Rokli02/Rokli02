@@ -1,8 +1,3 @@
-var script = document.createElement('script');
-script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
-
 $(document).ready(function () {
     let i = $("li.activeli").find("span.navtext");
     i.show();
@@ -47,3 +42,66 @@ function handleNavBar() {
         
     });
 }
+
+function openMenus(liIndex, liPath) {
+    let li = $("nav>ul").children("li");
+    setTimeout(function() {
+        if($(li[liIndex]).hasClass("activeli")) {
+            changeContentByFile(liPath);
+            stopAnimation();
+            if(liIndex == 0){
+                setTimeout(function() {
+                    let picholder = $(".picHolder").children("div");
+                    $(picholder[0]).css('background-image', 'url("src/img/it1.jpg")');
+                    $(picholder[1]).css('background-image', 'url("src/img/it1.jpg")');
+                }, 50);
+                picIndex = 0;
+                nextPicIndex = 0;
+                circleIndex = 0;
+                previousDir = 1;
+            }
+        }
+    }, 50);
+}
+
+function changeContentByFile(file) {
+    fetch(file)
+                .then(response => response.text())
+                .then(data => loadTextAsContent(data));
+}
+
+function loadTextAsContent(text) {
+    let content = $("#content").html(text);
+}
+
+//
+//  Regisztrációt kezelő funkciók
+//
+isOpen = false;
+function handleRegistration() {
+    var cursorOut = true;
+    $('#registration').mouseout(function () { 
+        cursorOut = true;
+    });
+    $('#registration').mouseover(function () { 
+        cursorOut = false;
+    });
+
+    $('#blank').click(function () {
+        if(cursorOut) {
+            openCloseRegistration();
+        }
+    });
+}
+
+function openCloseRegistration() { 
+    if(isOpen) {
+        $("#blank").hide();
+        $("#registration").hide();
+        isOpen = false;
+    } else {
+        $("#blank").show();
+        $("#registration").show();
+        isOpen = true;
+    }
+ }

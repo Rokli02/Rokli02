@@ -1,0 +1,14 @@
+<div class="main animation">
+            <div class="tablediv">
+                <div class="tablecol">
+                    <label id="cola" class="colrow">Coca Cola</label>
+                    <label id="fanta" class="colrow">Fanta</label>
+                    <label id="doritos" class="colrow">Doritos</label>
+                    <label id="cheeseb" class="colrow">Cheeseburger</label>
+                </div>
+                <div class="tablecol">
+                   <img id="kep" src="src/img/Cola.png" alt="kep" width="80%">
+                </div>
+            </div>
+            <script>animateBrand(true)</script>
+        </div>
