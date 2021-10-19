@@ -121,7 +121,7 @@ function validPasswLength(fieldID) {
     let length = value.length;
 
     if(length < 6 || length > 32) {
-        window.alert("A jelszó hosszának '6' és '32' közöttinek kell lennie.");
+        window.alert("A jelszónak '6' és '32' karakter hosszúságú közöttinek kell lennie.");
         return false;
     }
     return true;
