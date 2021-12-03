@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-## I am Roland Markó.
+#### I am Roland Markó, a Computer Science Engineer Student.
 
 
 - 🔭 I’m currently studying in ME.
